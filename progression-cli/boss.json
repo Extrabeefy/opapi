@@ -1,0 +1,6 @@
+{
+    "bossname": "TestBoss", 
+    "raidfilter": "test", 
+    "imgpath": "testpath", 
+    "killorder":"1"
+}

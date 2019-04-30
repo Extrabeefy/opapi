@@ -1,0 +1,25 @@
+// opapiprogression/proto/progression/progression.proto
+syntax = "proto3";
+
+package go.micro.srv.progression; 
+
+service ProgressionService {
+  rpc CreateBoss(Boss) returns (Response) {}
+  rpc GetBosses(GetRequest) returns (Response) {}
+}
+
+message Boss {
+  string id = 1;
+  string bossname = 2;
+  string raidfilter = 3;
+  string imgpath = 4;
+  string killorder = 5;
+}
+
+message GetRequest {}
+
+message Response {
+  bool created = 1;
+  Boss boss = 2;
+  repeated Boss bosses = 3;
+}
